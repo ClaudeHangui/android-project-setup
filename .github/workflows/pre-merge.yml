@@ -38,6 +38,10 @@ jobs:
             ~/.gradle/wrapper/
           key: cache-gradle
 
+      # Starting Gradle tasks
+      - name: Run Gradle tasks
+        run: ./gradlew build check publishToMavenLocal --continue
+
       # Code Checking
       - name: Check Kotlin code style
         run: ./gradlew ktlintCheck --continue   #Continues task execution after a task failure.
