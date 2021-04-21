@@ -40,7 +40,7 @@ jobs:
 
       # Code Checking
       - name: Check Kotlin code style
-        run: ./graldew ktlintCheck --continue   #Continues task execution after a task failure.
+        run: ./gradlew ktlintCheck --continue   #Continues task execution after a task failure.
 
       # Code Formatting
       - name: Fix Kotlin code style deviations
