@@ -95,20 +95,27 @@ class CoreBinaryPlugin : Plugin<Project> {
         coreDependencyList.add(Libraries.materialComponents)
         coreDependencyList.add(Libraries.navHostFragment)
         coreDependencyList.add(Libraries.navHostUi)
-        //coreDependencyList.add(Libraries.jacocoCore)
         return coreDependencyList.distinct()
     }
 
     private fun testImplementation(): List<String> {
         val unitTestDependencyList = mutableListOf<String>()
         unitTestDependencyList.add(Libraries.unitTestJunit)
+        unitTestDependencyList.add(Libraries.androidXTest)
+        unitTestDependencyList.add(Libraries.androidArchCoreTest)
+        unitTestDependencyList.add(Libraries.coreKotlinExtTest)
         return unitTestDependencyList.distinct()
     }
 
     private fun androidTestImplementation(): List<String> {
         val integrationTestDependencyList = mutableListOf<String>()
         integrationTestDependencyList.add(Libraries.integrationTestJunit)
+        integrationTestDependencyList.add(Libraries.androidXTest)
+        integrationTestDependencyList.add(Libraries.coreKotlinExtTest)
         integrationTestDependencyList.add(Libraries.espressoCore)
+        integrationTestDependencyList.add(Libraries.espressoContrib)
+        integrationTestDependencyList.add(Libraries.espressoIdlingResource)
+        integrationTestDependencyList.add(Libraries.espressoIntent)
         return integrationTestDependencyList.distinct()
     }
 }

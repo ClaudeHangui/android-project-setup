@@ -32,6 +32,12 @@ object Versions {
     const val unitTestJunit = "4.13.1"
     const val integrationTestJunit = "1.1.1"
     const val espressoCore = "3.3.0"
+    const val testCoreKtx = "1.2.0"
+    const val androidXTest = "2.1.0"
+    const val androidArchCoreTest = "2.1.0"
+    const val espressoContrib = "3.3.0"
+    const val espressoIntent = "3.3.0"
+    const val espressoIdlingResource = "3.2.0"
 }
 
 object Libraries {
@@ -40,12 +46,17 @@ object Libraries {
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompat}"
     const val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     const val materialComponents = "com.google.android.material:material:${Versions.materialComponents}"
-    //const val jacocoCore = "org.jacoco:org.jacoco.core:${Versions.jacoco}"
-    const val unitTestJunit = "junit:junit:${Versions.unitTestJunit}"
-    const val integrationTestJunit = "androidx.test.ext:junit:${Versions.integrationTestJunit}"
-    const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoCore}"
     const val navHostFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.navHostFragment}"
     const val navHostUi = "androidx.navigation:navigation-ui:${Versions.navHostFragment}"
+    const val unitTestJunit = "junit:junit:${Versions.unitTestJunit}"
+    const val integrationTestJunit = "androidx.test.ext:junit:${Versions.integrationTestJunit}"
+    const val coreKotlinExtTest = "androidx.test:core-ktx:${Versions.testCoreKtx}"
+    const val androidXTest = "androidx.test:core:${Versions.androidXTest}"
+    const val androidArchCoreTest = "androidx.arch.core:core-testing:${Versions.androidArchCoreTest}"
+    const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoCore}"
+    const val espressoContrib = "androidx.test.espresso:espresso-contrib:${Versions.espressoContrib}"
+    const val espressoIdlingResource = "androidx.test.espresso:espresso-idling-resource:${Versions.espressoIdlingResource}"
+    const val espressoIntent = "androidx.test.espresso:espresso-contrib:${Versions.espressoIntent}"
 }
 
 object BuildPlugins {
