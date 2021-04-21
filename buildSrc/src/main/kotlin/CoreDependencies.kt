@@ -25,6 +25,9 @@ object Versions {
     // code coverage
     //const val jacoco = "0.8.5"
 
+    // static code analysis
+    const val detekt = "1.15.0"
+
     // testing
     const val unitTestJunit = "4.13.1"
     const val integrationTestJunit = "1.1.1"
@@ -48,4 +51,5 @@ object Libraries {
 object BuildPlugins {
     const val klintGradlePlugin = "org.jlleitschuh.gradle.ktlint"
     const val gradleVersionsPlugin = "com.github.ben-manes.versions"
+    const val detektGradlePlugin = "io.gitlab.arturbosch.detekt"
 }
