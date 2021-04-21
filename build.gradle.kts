@@ -19,12 +19,24 @@ buildscript {
 plugins {
     id(BuildPlugins.detektGradlePlugin) version Versions.detekt
     id(BuildPlugins.klintGradlePlugin) version Versions.ktlint
+    id("com.github.ben-manes.versions") version "0.36.0"
+    jacoco
+    id("scriptplugins.jacoco-report")
+}
+
+// We use the 0.8.7 snapshot as a workaround for java.lang.instrument.IllegalClassFormatException when building artifact
+// https://github.com/gradle/gradle/issues/15038
+jacoco {
+    toolVersion = "0.8.7-SNAPSHOT"
 }
 
 allprojects {
     repositories {
         google()
         jcenter()
+        maven {
+            url = uri("https://oss.sonatype.org/content/repositories/snapshots")
+        }
     }
 }
 
