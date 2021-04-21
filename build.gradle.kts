@@ -16,7 +16,6 @@ buildscript {
     }
 }
 
-
 plugins {
     id(BuildPlugins.detektGradlePlugin) version Versions.detekt
     id(BuildPlugins.klintGradlePlugin) version Versions.ktlint
@@ -33,7 +32,7 @@ tasks {
     register("clean", Delete::class) {
         delete(rootProject.buildDir)
     }
-    withType<io.gitlab.arturbosch.detekt.Detekt>{
+    withType<io.gitlab.arturbosch.detekt.Detekt> {
         configureEach {
             jvmTarget = "1.8"
         }
@@ -43,7 +42,7 @@ tasks {
 // Detekt Configuration
 detekt {
     buildUponDefaultConfig = true // preconfigure defaults
-    config = files("$projectDir/config/detekt/detekt.yml")
+    config = rootProject.files("config/detekt/detekt.yml")
     reports {
         xml {
             enabled = true

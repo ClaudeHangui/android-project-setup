@@ -110,6 +110,7 @@ class CoreBinaryPlugin : Plugin<Project> {
     private fun androidTestImplementation(): List<String> {
         val integrationTestDependencyList = mutableListOf<String>()
         integrationTestDependencyList.add(Libraries.integrationTestJunit)
+        integrationTestDependencyList.add(Libraries.integrationTestTruthAssertion)
         integrationTestDependencyList.add(Libraries.androidXTest)
         integrationTestDependencyList.add(Libraries.coreKotlinExtTest)
         integrationTestDependencyList.add(Libraries.espressoCore)

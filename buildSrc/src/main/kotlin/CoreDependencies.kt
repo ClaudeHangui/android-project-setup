@@ -18,7 +18,7 @@ object Versions {
     const val navHostFragment = "2.3.5"
 
     // Code formatter
-    const val ktlint = "10.0.0"
+    const val ktlint = "9.4.1"
 
     const val gradleVersionPlugin = "0.37.0"
 
@@ -30,11 +30,12 @@ object Versions {
 
     // testing
     const val unitTestJunit = "4.13.1"
-    const val integrationTestJunit = "1.1.1"
-    const val espressoCore = "3.3.0"
     const val testCoreKtx = "1.2.0"
-    const val androidXTest = "2.1.0"
+    const val androidXTest = "1.2.0"
     const val androidArchCoreTest = "2.1.0"
+    const val integrationTestJunit = "1.1.1"
+    const val integrationTestTruthAssertion = "1.2.0"
+    const val espressoCore = "3.3.0"
     const val espressoContrib = "3.3.0"
     const val espressoIntent = "3.3.0"
     const val espressoIdlingResource = "3.2.0"
@@ -50,13 +51,14 @@ object Libraries {
     const val navHostUi = "androidx.navigation:navigation-ui:${Versions.navHostFragment}"
     const val unitTestJunit = "junit:junit:${Versions.unitTestJunit}"
     const val integrationTestJunit = "androidx.test.ext:junit:${Versions.integrationTestJunit}"
+    const val integrationTestTruthAssertion = "androidx.test.ext:truth:${Versions.integrationTestTruthAssertion}"
     const val coreKotlinExtTest = "androidx.test:core-ktx:${Versions.testCoreKtx}"
     const val androidXTest = "androidx.test:core:${Versions.androidXTest}"
     const val androidArchCoreTest = "androidx.arch.core:core-testing:${Versions.androidArchCoreTest}"
     const val espressoCore = "androidx.test.espresso:espresso-core:${Versions.espressoCore}"
     const val espressoContrib = "androidx.test.espresso:espresso-contrib:${Versions.espressoContrib}"
     const val espressoIdlingResource = "androidx.test.espresso:espresso-idling-resource:${Versions.espressoIdlingResource}"
-    const val espressoIntent = "androidx.test.espresso:espresso-contrib:${Versions.espressoIntent}"
+    const val espressoIntent = "androidx.test.espresso:espresso-intents:${Versions.espressoIntent}"
 }
 
 object BuildPlugins {
