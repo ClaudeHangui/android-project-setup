@@ -29,6 +29,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
         uses: actions/checkout@v2
 
+      # Gradle wrapper validation
+      - name: Validate Gradle Wrapper
+        uses: gradle/wrapper-validation-action@v1.0.3
+
       # Cache gradle files
       - name: Cache Gradle Files
         uses: actions/cache@v2
