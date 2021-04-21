@@ -44,11 +44,11 @@ jobs:
 
       # Code Formatting
       - name: Fix Kotlin code style deviations
-        run: ./graldew ktlintFormat --continue   #Continues task execution after a task failure.
+        run: ./gradlew ktlintFormat --continue   #Continues task execution after a task failure.
 
       # (Basic) Code analysis
       - name: Basic code analysis
-        run: ./graldew detekt --continue   #Continues task execution after a task failure.
+        run: ./gradlew detekt --continue   #Continues task execution after a task failure.
 
       # Stop gradle
       - name: Stop Gradle
