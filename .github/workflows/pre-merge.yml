@@ -40,9 +40,9 @@ jobs:
             ~/.gradle/wrapper/
           key: cache-gradle
 
-      # Runs a set of commands using the runners shell
-      - name: Run Gradle tasks
-        run: ./gradlew build check publishToMavenLocal --continue
+      # Publish Java artifact to Maven Local with Gradle -> WIP
+      #- name: Run Gradle tasks
+      #  run: ./gradlew build check publishToMavenLocal --continue
         
       # Stop gradle
       - name: Stop Gradle
