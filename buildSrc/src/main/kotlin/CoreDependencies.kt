@@ -65,4 +65,5 @@ object BuildPlugins {
     const val klintGradlePlugin = "org.jlleitschuh.gradle.ktlint"
     const val gradleVersionsPlugin = "com.github.ben-manes.versions"
     const val detektGradlePlugin = "io.gitlab.arturbosch.detekt"
+    const val jacocoScriptPlugin = "scriptplugins.jacoco-report"
 }

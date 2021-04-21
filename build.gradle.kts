@@ -21,7 +21,7 @@ plugins {
     id(BuildPlugins.klintGradlePlugin) version Versions.ktlint
     id("com.github.ben-manes.versions") version "0.36.0"
     jacoco
-    id("scriptplugins.jacoco-report")
+    id(BuildPlugins.jacocoScriptPlugin)
 }
 
 // We use the 0.8.7 snapshot as a workaround for java.lang.instrument.IllegalClassFormatException when building artifact
@@ -48,6 +48,17 @@ tasks {
         configureEach {
             jvmTarget = "1.8"
         }
+    }
+    //todo: set up task for dependency update
+    withType<com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask> {
+        rejectVersionIf {
+            isNonStable(candidate.version)
+        }
+        // optional parameters
+        checkForGradleUpdate = true
+        outputFormatter = "json"
+        outputDir = "build/dependencyUpdates"
+        reportfileName = "report"
     }
 }
 
@@ -95,4 +106,11 @@ ktlint {
         exclude("**/generated/**")
         include("**/kotlin/**")
     }
+}
+
+fun isNonStable(version: String): Boolean {
+    val stableKeyword = listOf("RELEASE", "FINAL", "GA").any { version.toUpperCase().contains(it) }
+    val regex = "^[0-9,.v-]+(-r)?$".toRegex()
+    val isStable = stableKeyword || regex.matches(version)
+    return isStable.not()
 }
